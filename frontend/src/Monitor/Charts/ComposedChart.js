@@ -29,8 +29,8 @@ function ComposedChart(props) {
     const allowIsolation = props.allowIsolation ? true : false;
     const seriesClickCb = props.onSeriesClick;
     const seriesRenderer = props.seriesRenderer;
-    const leftDomain = props.leftDomain ? props.leftDomain : [dataMin => dataMin < 0 ? dataMin : 0, 'dataMax+1'];
-    const rightDomain = props.rightDomain ? props.rightDomain : [dataMin => dataMin < 0 ? dataMin : 0, 'dataMax+1'];
+    const leftDomain = props.leftDomain ? props.leftDomain : [dataMin => dataMin, 'dataMax+1'];
+    const rightDomain = props.rightDomain ? props.rightDomain : [dataMin => dataMin, 'dataMax+1'];
     const leftScale = props.leftScale ? props.leftScale : 'linear';
     const rightScale = props.rightScale ? props.rightScale : 'linear';
     const xSelect = props.xSelect ? props.xSelect : snap => selectNested('date_days', snap);
